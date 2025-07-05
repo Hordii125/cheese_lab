@@ -18,7 +18,6 @@ public class CheeseCSV_file_Reader {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line;
             while ((line = br.readLine()) != null) {
-                
                 Cheese cheese = parseCheese(line);
                 cheeseList.addCheese(cheese);
             }
@@ -32,7 +31,7 @@ public class CheeseCSV_file_Reader {
 
     private Cheese parseCheese(String line) {
         String cleanedLine = rowCleaner.cleanRow(line);
-        Cheese cheeseId = parser.parse(cleanedLine);  
-        return cheeseId;
+        Cheese cheese = parser.parse(cleanedLine);  
+        return cheese;
     }
 }

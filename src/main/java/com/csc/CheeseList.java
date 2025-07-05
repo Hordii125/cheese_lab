@@ -16,7 +16,7 @@ public class CheeseList {
     public int getnumberOfPasteurizedCheeses(){
         int count = 0;
         for (Cheese cheese : cheeses) {
-            if (cheese.numberOfPasteurizedCheeses == "whatever condition") {
+            if (cheese.miklType == "Pasteurized Milk") {
                 count++;
             }
         }
@@ -26,13 +26,13 @@ public class CheeseList {
     public int getnumberOfRawCheeses(){
         int count = 0;
         for (Cheese cheese : cheeses) {
-            if (cheese.numberOfRawCheeses == "whatever condition") {
+            if (cheese.miklType == "Raw Milk") {
                 count++;
             }
         }
         return count;
     }
-
+/*
     public int getnumberOfOrganicCheesesMoistMoreThan41(){
         int count = 0;
         for (Cheese cheese : cheeses) {
@@ -48,4 +48,5 @@ public class CheeseList {
         // For now, we will return a placeholder value
         return "Placeholder for most popular milk type in Canada";
     }
+    */
 }
