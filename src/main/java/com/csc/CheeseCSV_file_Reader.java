@@ -30,7 +30,6 @@ public class CheeseCSV_file_Reader {
                     continue;
                 }
                 // Add cheese to the list
-                System.out.println("Processing line: " + rowCleaner.cleanRow(line));
                 cheeseList.addCheese(cheese);
             }
             br.close();
