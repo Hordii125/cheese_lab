@@ -16,7 +16,7 @@ public class CheeseList {
     public int getnumberOfPasteurizedCheeses(){
         int count = 0;
         for (Cheese cheese : cheeses) {
-            if (cheese.miklType == "Pasteurized") {
+            if ("Pasteurized".equals(cheese.miklType.trim())) {
                 count++;
             }
         }
@@ -26,7 +26,7 @@ public class CheeseList {
     public int getnumberOfRawCheeses(){
         int count = 0;
         for (Cheese cheese : cheeses) {
-            if (cheese.miklType == "Raw Milk") {
+            if ("Raw Milk".equals(cheese.miklType.trim())) {
                 count++;
             }
         }
@@ -38,7 +38,7 @@ public class CheeseList {
         for (Cheese cheese : cheeses) {
             // Assuming we have a method to check moisture content
             // This is a placeholder condition, replace with actual logic
-            if (cheese.OrganicOrNot.equals("Organic") && cheese.moistureContentMoreThan41.equals("Moisture content is more than 41%")) {
+            if (cheese.OrganicOrNot && cheese.moistureContentMoreThan41) {
                 count++;
             }
         }

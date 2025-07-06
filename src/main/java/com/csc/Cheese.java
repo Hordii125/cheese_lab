@@ -3,10 +3,10 @@ package com.csc;
 public class Cheese {
     private String cheeseId;
     public String miklType;
-    public String OrganicOrNot;
-    public String moistureContentMoreThan41;
+    public boolean OrganicOrNot;
+    public boolean moistureContentMoreThan41;
     
-    Cheese (String ID, String milkType, String organicOrNot, String moistureContentMoreThan41) {
+    Cheese (String ID, String milkType, boolean organicOrNot, boolean moistureContentMoreThan41) {
         this.cheeseId = ID;
         this.miklType = milkType;
         this.OrganicOrNot = organicOrNot;
