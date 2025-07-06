@@ -16,9 +16,21 @@ public class CheeseCSV_file_Reader {
         CheeseList cheeseList = new CheeseList();
         try  {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
+            br.readLine(); // Skip the header line
             String line;
             while ((line = br.readLine()) != null) {
+                
+                // Skip empty lines
+                if (line.trim().isEmpty()) {
+                    continue;
+                }
                 Cheese cheese = parseCheese(line);
+                // Skip null cheeses
+                if (cheese == null) {
+                    continue;
+                }
+                // Add cheese to the list
+                System.out.println("Processing line: " + rowCleaner.cleanRow(line));
                 cheeseList.addCheese(cheese);
             }
             br.close();
